@@ -5,7 +5,7 @@ export default function Product({ product }) {
   console.log(product);
   return (
     <Link to={`/product/${product.id}`}>
-      <div className="bg-gradient-to-t from-[#1F2126] to-[#33363D] drop-shadow-2xl w-full h-[362px] rounded-[8px] overflow-hidden relative group">
+      <div className="bg-gradient-to-t from-[#1F2126] to-[#33363D] drop-shadow-2xl w-full h-[382px] rounded-[8px] overflow-hidden relative group">
         {/* badge */}
         {product.attributes.isNew ? (
           <div className="absolute bg-yellow-300 text-black text-[12px] font-bold uppercase top-4 right-4 px-2 rounded-full z-10">
@@ -23,7 +23,7 @@ export default function Product({ product }) {
           />
         </div>
         {/* text */}
-        <div className="px-6 mt-4 flex flex-col">
+        <div className="px-6 mt-6 flex flex-col">
           {/* category */}
           <div className="text-sm text-yellow-300 capitalize mb-2">
             {product.attributes.categories.data[0].attributes.title}
