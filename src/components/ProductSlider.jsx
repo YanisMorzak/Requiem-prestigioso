@@ -3,10 +3,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/pagination";
+
+import { Navigation, Pagination } from "swiper/modules";
+
 import Product from "./Product";
 
 export default function ProductSlider({ data }) {
-  console.log(data);
   return (
     <Swiper>
       <>
