@@ -22,6 +22,21 @@ export default function Product({ product }) {
             alt=""
           />
         </div>
+        {/* text */}
+        <div className="px-6 mt-4 flex flex-col">
+          {/* category */}
+          <div className="text-sm text-yellow-300 capitalize mb-2">
+            {product.attributes.categories.data[0].attributes.title}
+          </div>
+          {/* title */}
+          <div className="text-[15px] mb-4 lg:mb-9">
+            {product.attributes.title.substring(0, 25)}...
+          </div>
+          {/* price */}
+          <div className="text-lg text-yellow-300">
+            ${product.attributes.price.toLocaleString()}
+          </div>
+        </div>
       </div>
     </Link>
   );
