@@ -1,6 +1,6 @@
 import React from "react";
 import ProductSlider from "./ProductSlider";
-import useFetch from "../hooks/useFetch";
+import useFetch from "../../hooks/useFetch";
 
 export default function LatestProducts() {
   const { data } = useFetch("/products?populate=*&filters[isNew]=true");
