@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Product({ product }) {
-  console.log(product);
   return (
     <Link to={`/product/${product.id}`}>
       <div className="bg-gradient-to-t from-[#1F2126] to-[#33363D] drop-shadow-2xl w-full h-[382px] rounded-[8px] overflow-hidden relative group">

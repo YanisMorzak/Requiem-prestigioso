@@ -37,7 +37,7 @@ export default function ProductSlider({ data }) {
       pagination={{
         clickable: true,
       }}
-      className="mt-20 productSlider mx-auto max-w-[360px] md:max-w-lg xl:max-w-[1410px]"
+      className="mt-10 productSlider mx-auto max-w-[360px] md:max-w-lg xl:max-w-[1410px]"
     >
       <>
         {data?.map((product) => {

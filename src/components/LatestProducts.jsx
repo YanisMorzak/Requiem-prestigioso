@@ -7,7 +7,7 @@ export default function LatestProducts() {
   return (
     <div className="mb-16">
       <div className="container mx-auto">
-        <h2 className="h2 mb-6 text-center text-2xl xl:text-left">
+        <h2 className="h2 text-center text-2xl xl:text-left">
           Latest Products
         </h2>
       </div>
