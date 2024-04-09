@@ -7,33 +7,7 @@ import "swiper/css/navigation";
 import "./../../slider.css";
 
 import { Pagination } from "swiper/modules";
-
-const sliderData = [
-  {
-    img: "/images/grestch_incliné-removebg-preview.png",
-    pretitle: "Special offer",
-    titlePart1: "Save 20%",
-    titlePart2: "On your",
-    titlePart3: "first order",
-    btnText: "Shop now",
-  },
-  {
-    img: "/images/grestch_incliné-removebg-preview.png",
-    pretitle: "Special offer",
-    titlePart1: "Save 20%",
-    titlePart2: "On your",
-    titlePart3: "first order",
-    btnText: "Shop now",
-  },
-  {
-    img: "/images/grestch_incliné-removebg-preview.png",
-    pretitle: "Special offer",
-    titlePart1: "Save 20%",
-    titlePart2: "On your",
-    titlePart3: "first order",
-    btnText: "Shop now",
-  },
-];
+import { sliderData } from "../../data/sliderData";
 
 export default function MainSlider() {
   return (
