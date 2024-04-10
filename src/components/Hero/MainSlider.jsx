@@ -17,7 +17,7 @@ export default function MainSlider() {
       pagination={{
         clickable: true,
       }}
-      className="mainSlider h-full bg-primary max-w-lg lg:max-w-none rounded-[8px] overflow-hidden drop-shadow-2xl"
+      className="mainSlider h-full bg-gradient-to-r from-teal-900 to-teal-600 max-w-lg lg:max-w-none rounded-[8px] overflow-hidden drop-shadow-2xl"
     >
       <>
         {sliderData.map((slide, index) => {
@@ -34,7 +34,7 @@ export default function MainSlider() {
                     {slide.titlePart2} <br />
                     {slide.titlePart3}
                   </div>
-                  <button className="h-[50px] flex justify-center items-center rounded-[8px] px-10 py-[10px] text-sm uppercase font-bold bg-yellow-300 text-primary hover:bg-accent-hover transition-all mx-auto lg:mx-0">
+                  <button className="h-[50px] flex justify-center items-center rounded-[8px] px-10 py-[10px] text-sm uppercase font-bold bg-gold text-primary hover:bg-accent-hover transition-all mx-auto lg:mx-0">
                     Shop now
                   </button>
                 </div>
