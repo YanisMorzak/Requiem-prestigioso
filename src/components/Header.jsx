@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import SearchForm from "./SearchForm";
 
 import { FiMenu } from "react-icons/fi";
@@ -10,21 +10,29 @@ import { CartContext } from "../context/CartContext";
 
 export default function Header() {
   const { isOpen, setIsOpen } = useContext(CartContext);
+  const [catNavMobile, setCatNavMobile] = useState(false);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <header>
+    <header className="bg-black py-6 fixed w-full top-0 z-40 lg:relative xl:mb-[30px]">
       <div className="container mx-auto">
-        <div>
+        <div className="flex flex-row gap-4 lg:items-center justify-between mb-4 lg:mb-0">
           {/* menu */}
-          <div>
+          <div
+            onClick={() => setCatNavMobile(true)}
+            className="text-3xl xl:hidden cursor-pointer"
+          >
             <FiMenu />
           </div>
           {/* category nav mobile*/}
-          <div>
-            <CategoryNavMobile />
+          <div
+            className={`${
+              catNavMobile ? "left-0" : "-left-full"
+            } fixed top-0 bottom-0 z-30 w-full h-screen transition-all duration-200 `}
+          >
+            <CategoryNavMobile setCatNavMobile={setCatNavMobile} />
           </div>
           {/* logo */}
           <Link to={"/"}>
