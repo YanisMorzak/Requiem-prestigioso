@@ -35,7 +35,7 @@ export default function Header() {
             <div>2</div>
           </div>
           {/* cart */}
-          <div>
+          <div className="bg-[#0e0f10] shadow-xl fixed top-0 bottom-0 w-full z-50 md:max-w-[500px] transition-all duration-300">
             <Cart />
           </div>
         </div>
