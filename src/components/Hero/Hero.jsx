@@ -13,7 +13,7 @@ export default function Hero() {
             <CategoryNav />
           </div>
           {/* main slider */}
-          <div className="w-full max-w-lg bg-pink-300 lg:max-w-[734px] mx-auto">
+          <div className="w-full max-w-lg lg:max-w-[734px] mx-auto">
             <MainSlider />
           </div>
           {/* promo */}
