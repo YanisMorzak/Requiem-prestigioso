@@ -16,7 +16,7 @@ export default function Promo() {
         </div>
         {/* image */}
         <img
-          className="absolute z-20 -top-2 -right-0"
+          className="absolute z-10 -top-2 -right-0"
           src={"/images/Design_sans_titre__2_-removebg-preview.png"}
           alt=""
         />
@@ -34,7 +34,7 @@ export default function Promo() {
         </div>
         {/* image */}
         <img
-          className="absolute z-20 -top-2 -right-0"
+          className="absolute z-10 -top-2 -right-0"
           src={"/images/Design_sans_titre__2_-removebg-preview.png"}
           alt=""
         />

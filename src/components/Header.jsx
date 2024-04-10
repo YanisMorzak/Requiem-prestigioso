@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import SearchForm from "./SearchForm";
 
 import { FiMenu } from "react-icons/fi";
@@ -6,8 +6,14 @@ import { SlBag } from "react-icons/sl";
 import CategoryNavMobile from "./CategoryNavMobile";
 import { Link } from "react-router-dom";
 import Cart from "./Cart";
+import { CartContext } from "../context/CartContext";
 
 export default function Header() {
+  const { isOpen, setIsOpen } = useContext(CartContext);
+
+  const handleClick = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <header>
       <div className="container mx-auto">
@@ -28,15 +34,22 @@ export default function Header() {
           <div className="hidden w-full xl:flex xl:max-w-[734px]">
             <SearchForm />
           </div>
-          {/* cart icon*/}
-          <div className="relative cursor-pointer">
-            <SlBag className="text-2xl" />
-            {/* amount */}
-            <div>2</div>
-          </div>
-          {/* cart */}
-          <div className="bg-[#0e0f10] shadow-xl fixed top-0 bottom-0 w-full z-50 md:max-w-[500px] transition-all duration-300">
-            <Cart />
+          <div>
+            {/* cart icon*/}
+            <div onClick={handleClick} className="relative cursor-pointer">
+              <SlBag className="text-2xl" />
+              {/* amount */}
+              <div>2</div>
+            </div>
+            {/* cart */}
+            {isOpen && (
+              <div
+                className={`
+              bg-[#0e0f10] shadow-xl fixed top-0 bottom-0 right-0 w-full md:max-w-[500px] z-10 transition-all duration-300`}
+              >
+                <Cart />
+              </div>
+            )}
           </div>
         </div>
         {/* searchform - show on mobile only */}
