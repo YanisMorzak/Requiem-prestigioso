@@ -1,16 +1,30 @@
 import React, { useState } from "react";
 import { FiSearch } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
 
 export default function SearchForm() {
   const [searchTerm, setSearchTerm] = useState("");
+  const navigate = useNavigate();
 
   const handleSearchInput = (e) => {
     setSearchTerm(e.target.value);
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (searchTerm.length > 0) {
+      navigate(`/search?query=${searchTerm}`);
+      setSearchTerm("");
+    } else {
+      console.log("error");
+    }
+  };
+
   return (
-    <form className="w-full relative">
+    <form onSubmit={handleSubmit} className="w-full relative">
       <input
+        value={searchTerm}
         onChange={handleSearchInput}
         className="h-[50px] rounded-[8px] w-full outline-none px-6 text-primary font-semibold"
         type="text"
