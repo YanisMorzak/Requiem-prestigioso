@@ -1,10 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 
 export default function SearchForm() {
   const [searchTerm, setSearchTerm] = useState("");
+  const [isAnimating, setIsAnimating] = useState(false);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsAnimating(false);
+    }, 1000);
+
+    return () => clearTimeout(timeout);
+  });
 
   const handleSearchInput = (e) => {
     setSearchTerm(e.target.value);
@@ -17,12 +26,17 @@ export default function SearchForm() {
       navigate(`/search?query=${searchTerm}`);
       setSearchTerm("");
     } else {
-      console.log("error");
+      setIsAnimating(true);
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-full relative">
+    <form
+      onSubmit={handleSubmit}
+      className={`${
+        isAnimating ? "animate-shake" : "animate-none"
+      } w-full relative`}
+    >
       <input
         value={searchTerm}
         onChange={handleSearchInput}
