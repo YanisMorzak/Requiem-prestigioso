@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { FiSearch } from "react-icons/fi";
 
 export default function SearchForm() {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSearchInput = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
   return (
     <form className="w-full relative">
       <input
+        onChange={handleSearchInput}
         className="h-[50px] rounded-[8px] w-full outline-none px-6 text-primary font-semibold"
         type="text"
         placeholder="Search for a product..."
