@@ -21,11 +21,19 @@ export default function Search() {
         <div className="flex gap-x-[30px]">
           {/* category nav  */}
           <CategoryNav />
-          {/* products grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-[15px] md:gap-[30px] mx-auto">
-            {data?.map((product) => {
-              return <Product product={product} key={product.id} />;
-            })}
+          <div className="mx-auto">
+            {/* title */}
+            <div className="py-3 text-xl capitalize text-center lg:text-left">
+              {data?.length > 0
+                ? `${data.length} results for ${searchTerm}`
+                : `no results found for ${searchTerm}`}
+            </div>
+            {/* products grid */}
+            <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-[15px] md:gap-[30px] ">
+              {data?.map((product) => {
+                return <Product product={product} key={product.id} />;
+              })}
+            </div>
           </div>
         </div>
       </div>
