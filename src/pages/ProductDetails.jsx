@@ -8,7 +8,10 @@ export default function ProductDetails() {
 
   //  get product data base on the id
   const { data } = useFetch(`/products?populate=*&filters[id][$eq]=${id}`);
-  console.log("data: ", data);
+
+  if (!data) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="mb-16 pt-44 lg:pt-[30px] xl:pt-2">
