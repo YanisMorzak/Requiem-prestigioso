@@ -18,6 +18,7 @@ export default function CategoryNavMobile({ setCatNavMobile }) {
           return (
             <Link
               to={`products/${category.id}`}
+              onClick={() => setCatNavMobile(false)}
               className="uppercase font-medium"
               key={category.id}
             >
