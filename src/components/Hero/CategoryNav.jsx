@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function CategoryNav() {
   const { data } = useFetch("/categories/");
-  console.log(data);
+
   return (
     <aside className="hidden xl:flex">
       <div className="bg-emeraude flex flex-col w-[286px] h-[500px] rounded-[8px] overflow-hidden">
