@@ -2,6 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 import Product from "../components/LatestProduct/Product";
+import CategoryNav from "../components/Hero/CategoryNav";
 
 export default function Search() {
   const location = useLocation();
@@ -17,9 +18,11 @@ export default function Search() {
   return (
     <div className="mb-[30px] pt-40 lg:pt-2">
       <div className="container mx-auto px-5">
-        <div>
+        <div className="flex gap-x-[30px]">
+          {/* category nav  */}
+          <CategoryNav />
           {/* products grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-[15px] md:gap-[30px]">
+          <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-[15px] md:gap-[30px] mx-auto">
             {data?.map((product) => {
               return <Product product={product} key={product.id} />;
             })}
