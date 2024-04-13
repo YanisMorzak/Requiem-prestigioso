@@ -15,11 +15,11 @@ export default function Search() {
   console.log(data);
 
   return (
-    <div>
-      <div className="container mx-auto">
+    <div className="mb-[30px] pt-40 lg:pt-2">
+      <div className="container mx-auto px-5">
         <div>
           {/* products grid */}
-          <div>
+          <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-[15px] md:gap-[30px]">
             {data?.map((product) => {
               return <Product product={product} key={product.id} />;
             })}
