@@ -21,7 +21,7 @@ export default function Search() {
         <div className="flex gap-x-[30px]">
           {/* category nav  */}
           <CategoryNav />
-          <div className="mx-auto">
+          <div className="flex-1">
             {/* title */}
             <div className="py-3 text-xl capitalize text-center lg:text-left">
               {data?.length > 0
