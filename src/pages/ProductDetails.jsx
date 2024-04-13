@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
+import RelatedProducts from "../components/RelatedProducts";
 
 export default function ProductDetails() {
   const { id } = useParams();
@@ -13,7 +14,16 @@ export default function ProductDetails() {
     <div className="mb-16 pt-44 lg:pt-[30px] xl:pt-2">
       <div className="container mx-auto">
         {/* text */}
-        <div>text</div>
+        <div>
+          <div>
+            <img
+              src={`http://localhost:1337${data[0].attributes.image.data.attributes.url}`}
+              alt={data[0].attributes.title}
+            />
+          </div>
+        </div>
+        {/* related products */}
+        <RelatedProducts />
       </div>
     </div>
   );
