@@ -1,6 +1,6 @@
 import React from "react";
-import useFetch from "../hooks/useFetch";
-import ProductSlider from "./LatestProduct/ProductSlider";
+import useFetch from "../../hooks/useFetch";
+import ProductSlider from "../LatestProduct/ProductSlider";
 
 export default function RelatedProducts({ categoryTitle }) {
   const { data } = useFetch(
