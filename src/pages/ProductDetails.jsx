@@ -13,6 +13,8 @@ export default function ProductDetails() {
     return <div className="container mx-auto">Loading...</div>;
   }
 
+  const categoryTitle = data[0].attributes.categories.data[0].attributes.title;
+
   return (
     <div className="mb-16 pt-44 lg:pt-[30px] xl:pt-2 px-5">
       <div className="container mx-auto">
@@ -50,7 +52,7 @@ export default function ProductDetails() {
           </div>
         </div>
         {/* related products */}
-        <RelatedProducts />
+        <RelatedProducts categoryTitle={categoryTitle} />
       </div>
     </div>
   );
