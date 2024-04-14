@@ -5,8 +5,8 @@ import { FiMenu } from "react-icons/fi";
 import { SlBag } from "react-icons/sl";
 import CategoryNavMobile from "./CategoryNavMobile";
 import { Link } from "react-router-dom";
-import Cart from "./Cart";
-import { CartContext } from "../context/CartContext";
+import Cart from "../Cart";
+import { CartContext } from "../../context/CartContext";
 
 export default function Header() {
   const { isOpen, setIsOpen } = useContext(CartContext);
