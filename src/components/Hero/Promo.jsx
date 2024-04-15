@@ -10,7 +10,7 @@ export default function Promo() {
           <div className="text-[20px] uppercase font-medium leading-tight mb-4">
             Save 35% all Piano{" "}
           </div>
-          <a href="#" className="uppercase text-gold font-semibold">
+          <a href="#" className="uppercase text-yellow-300 font-semibold">
             Shop now
           </a>
         </div>
@@ -28,7 +28,7 @@ export default function Promo() {
           <div className="text-[20px] uppercase font-medium leading-tight mb-4">
             Save 25% all Drums{" "}
           </div>
-          <a href="#" className="uppercase text-gold font-semibold">
+          <a href="#" className="uppercase text-yellow-300 font-semibold">
             Shop now
           </a>
         </div>

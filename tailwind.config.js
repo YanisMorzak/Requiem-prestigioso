@@ -7,7 +7,8 @@ module.exports = {
         body: "#1D1F23",
         primary: "#151618",
         emeraude: "#13514C",
-        gold: "#EFDF6C",
+        light: "#4C8F8A",
+        extraLight: "#97D4CF",
         accent: {
           DEFAULT: "#F6CD46",
           hover: "#E1B72E",
