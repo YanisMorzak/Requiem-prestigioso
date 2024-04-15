@@ -5,8 +5,8 @@ import { FiMenu } from "react-icons/fi";
 import { SlBag } from "react-icons/sl";
 import CategoryNavMobile from "./CategoryNavMobile";
 import { Link } from "react-router-dom";
-import Cart from "./Cart";
-import { CartContext } from "../context/CartContext";
+import Cart from "../Cart";
+import { CartContext } from "../../context/CartContext";
 
 export default function Header() {
   const { isOpen, setIsOpen } = useContext(CartContext);
@@ -48,7 +48,7 @@ export default function Header() {
             <div onClick={handleClick} className="relative cursor-pointer">
               <SlBag className="text-2xl" />
               {/* amount */}
-              <div className="bg-gold text-primary font-semibold absolute w-[18px] h-[18px] rounded-full flex justify-center items-center top-3 -right-1">
+              <div className="bg-light text-primary font-semibold absolute w-[18px] h-[18px] rounded-full flex justify-center items-center top-3 -right-1">
                 2
               </div>
             </div>

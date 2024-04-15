@@ -1,6 +1,6 @@
 import React from "react";
 import { FiX } from "react-icons/fi";
-import useFetch from "../hooks/useFetch";
+import useFetch from "../../hooks/useFetch";
 import { Link } from "react-router-dom";
 
 export default function CategoryNavMobile({ setCatNavMobile }) {
