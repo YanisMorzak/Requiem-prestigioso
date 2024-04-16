@@ -28,11 +28,12 @@ export default function CartProvider({ children }) {
     } else {
       setCart([...cart, newItem]);
     }
+    // open the card sidebar
     setIsOpen(true);
   };
 
   return (
-    <CartContext.Provider value={{ isOpen, setIsOpen, addToCart }}>
+    <CartContext.Provider value={{ isOpen, setIsOpen, addToCart, cart }}>
       {children}
     </CartContext.Provider>
   );
