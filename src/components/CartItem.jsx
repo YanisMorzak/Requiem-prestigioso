@@ -15,18 +15,21 @@ export default function CartItem({ item }) {
       </Link>
       <div className="flex-1">
         {/* title & remove icon */}
-        <div className="flex">
+        <div className="flex justify-between mb-3">
           <Link to={`/product/${item.id}`}>{item.attributes.title}</Link>
           <div className="cursor-pointer text-[24px] hover:text-accent transition-all">
             <IoClose />
           </div>
         </div>
-        {/* quantity */}
-        <div>
-          <div>
+        <div className="flex items-center gapx12">
+          {/* quantity */}
+          <div className="flex gap-x-4 mb-2">
             <CartItemQuantity item={item} />
+
+            <div className="text-accent text-xl">
+              $ {item.attributes.price * item.amount}
+            </div>
           </div>
-          <div>$ {item.attributes.price * item.amount}</div>
         </div>
         {/* price */}
         <div>

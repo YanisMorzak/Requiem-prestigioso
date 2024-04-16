@@ -16,7 +16,7 @@ export default function Cart() {
         >
           <IoClose />
         </div>
-        <div>
+        <div className="flex flex-col gap-y-10 px-2">
           {cart.map((item) => {
             return <CartItem item={item} key={item.id} />;
           })}
