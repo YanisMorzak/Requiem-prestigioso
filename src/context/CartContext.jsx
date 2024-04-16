@@ -77,6 +77,27 @@ export default function CartProvider({ children }) {
     setIsOpen(true);
   };
 
+  const handleSelect = (e, id) => {
+    const value = parseInt(e.target.value);
+
+    // find the item in the cart by id
+    const cartItem = cart.find((item) => {
+      return item.id === id;
+    });
+
+    if (cartItem) {
+      const newCart = cart.map((item) => {
+        if (item.id === id) {
+          setAmount(value);
+          return { ...item, amount: value };
+        } else {
+          return item;
+        }
+      });
+      setCart(newCart);
+    }
+  };
+
   return (
     <CartContext.Provider
       value={{
@@ -87,6 +108,7 @@ export default function CartProvider({ children }) {
         removeFromCart,
         itemsAmount,
         handleInput,
+        handleSelect,
       }}
     >
       {children}
