@@ -8,6 +8,7 @@ export default function CartProvider({ children }) {
   const [amount, setAmount] = useState(0);
   const [itemsAmount, setItemsAmount] = useState(0);
 
+  // cart amount
   useEffect(() => {
     const amount = cart.reduce((a, c) => {
       return a + c.amount;
@@ -49,6 +50,33 @@ export default function CartProvider({ children }) {
     setCart(cartUpdated);
   };
 
+  const handleInput = (e, id) => {
+    const value = parseInt(e.target.value);
+
+    // find the item in the cart by id
+    const cartItem = cart.find((item) => {
+      return item.id === id;
+    });
+
+    if (cartItem) {
+      const newCart = cart.map((item) => {
+        if (item.id === id) {
+          if (isNaN(value)) {
+            setAmount(1);
+            return { ...item, amount: 1 };
+          } else {
+            setAmount(value);
+            return { ...item, amount: value };
+          }
+        } else {
+          return item;
+        }
+      });
+      setCart(newCart);
+    }
+    setIsOpen(true);
+  };
+
   return (
     <CartContext.Provider
       value={{
@@ -58,6 +86,7 @@ export default function CartProvider({ children }) {
         cart,
         removeFromCart,
         itemsAmount,
+        handleInput,
       }}
     >
       {children}
