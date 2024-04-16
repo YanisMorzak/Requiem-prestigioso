@@ -32,8 +32,17 @@ export default function CartProvider({ children }) {
     setIsOpen(true);
   };
 
+  const removeFromCart = (id) => {
+    const cartCopy = [...cart];
+
+    const cartUpdated = cartCopy.filter((item) => item.id !== id);
+
+    setCart(cartUpdated);
+  };
   return (
-    <CartContext.Provider value={{ isOpen, setIsOpen, addToCart, cart }}>
+    <CartContext.Provider
+      value={{ isOpen, setIsOpen, addToCart, cart, removeFromCart }}
+    >
       {children}
     </CartContext.Provider>
   );
