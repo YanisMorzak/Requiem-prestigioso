@@ -14,9 +14,19 @@ export default function CartItem({ item }) {
       </Link>
       <div>
         {/* title & remove icon */}
-        <Link to={`/product/${item.id}`}>{item.attributes.title}</Link>
-        <div className="cursor-pointer text-[24px] hover:text-accent transition-all">
-          <IoClose />
+        <div>
+          <Link to={`/product/${item.id}`}>{item.attributes.title}</Link>
+          <div className="cursor-pointer text-[24px] hover:text-accent transition-all">
+            <IoClose />
+          </div>
+        </div>
+        {/* quantity */}
+        <div>quantity</div>
+        {/* price */}
+        <div>
+          <span className="text-accent">
+            $ {item.attributes.price.toLocaleString()} per piece
+          </span>
         </div>
       </div>
     </div>
