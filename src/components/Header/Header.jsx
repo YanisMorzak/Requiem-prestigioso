@@ -9,7 +9,7 @@ import Cart from "../Cart";
 import { CartContext } from "../../context/CartContext";
 
 export default function Header() {
-  const { isOpen, setIsOpen } = useContext(CartContext);
+  const { isOpen, setIsOpen, itemsAmount } = useContext(CartContext);
   const [catNavMobile, setCatNavMobile] = useState(false);
 
   const handleClick = () => {
@@ -49,7 +49,7 @@ export default function Header() {
               <SlBag className="text-2xl" />
               {/* amount */}
               <div className="bg-light text-primary font-semibold absolute w-[18px] h-[18px] rounded-full flex justify-center items-center top-3 -right-1">
-                2
+                {itemsAmount}
               </div>
             </div>
             {/* cart */}
