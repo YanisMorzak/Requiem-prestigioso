@@ -8,7 +8,7 @@ export default function Cart() {
   const { setIsOpen, cart } = useContext(CartContext);
   return (
     <div className="w-full h-full px-4">
-      <div>
+      <div className="overflow-y-auto overflow-x-hidden h-[80vh] ">
         {/* close icon */}
         <div
           onClick={() => setIsOpen(false)}
