@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 
-import { IoClose } from "react-icons/io5";
+import { IoCartOutline, IoClose } from "react-icons/io5";
 import { CartContext } from "../context/CartContext";
 import CartItem from "./CartItem";
 import Total from "./Total";
@@ -34,7 +34,12 @@ export default function Cart() {
             <Button btnValue={"Checkout"} />
           </div>
         ) : (
-          <div>Your cart is empty</div>
+          <div className="h-full absolute top-0 right-0 left-0 flex justify-center items-center -z-10 flex-col text-white/30">
+            <div className="text-2xl">Your cart is empty</div>
+            <div className="text-6xl">
+              <IoCartOutline />
+            </div>
+          </div>
         )}
       </div>
     </div>
