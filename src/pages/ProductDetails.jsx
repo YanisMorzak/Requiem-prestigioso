@@ -24,7 +24,7 @@ export default function ProductDetails() {
           {/* image */}
           <ProductDetailsImage data={data} />
           {/* text */}
-          <ProductDetailsText data={data} />
+          <ProductDetailsText data={data} id={id} />
         </div>
         {/* related products */}
         <RelatedProducts categoryTitle={categoryTitle} />
