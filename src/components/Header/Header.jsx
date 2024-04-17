@@ -5,7 +5,7 @@ import { FiMenu } from "react-icons/fi";
 import { SlBag } from "react-icons/sl";
 import CategoryNavMobile from "./CategoryNavMobile";
 import { Link } from "react-router-dom";
-import Cart from "../Cart";
+import Cart from "../Cart/Cart";
 import { CartContext } from "../../context/CartContext";
 
 export default function Header() {

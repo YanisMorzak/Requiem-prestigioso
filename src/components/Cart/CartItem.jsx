@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
 import { IoClose } from "react-icons/io5";
 import { Link } from "react-router-dom";
+
+import { CartContext } from "../../context/CartContext";
 import CartItemQuantity from "./CartItemQuantity";
-import { CartContext } from "../context/CartContext";
 
 export default function CartItem({ item }) {
   const { removeFromCart } = useContext(CartContext);

@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
 
 import { IoCartOutline, IoClose } from "react-icons/io5";
-import { CartContext } from "../context/CartContext";
+import { CartContext } from "../../context/CartContext";
 import CartItem from "./CartItem";
+
+import Button from "../Button";
 import Total from "./Total";
-import Button from "./Button";
 
 export default function Cart() {
   const { setIsOpen, cart, clearCart } = useContext(CartContext);
