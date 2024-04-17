@@ -5,7 +5,7 @@ import { CartContext } from "../context/CartContext";
 import CartItem from "./CartItem";
 
 export default function Cart() {
-  const { setIsOpen, cart } = useContext(CartContext);
+  const { setIsOpen, cart, total } = useContext(CartContext);
   return (
     <div className="w-full h-full px-4">
       <div className="overflow-y-auto overflow-x-hidden h-[80vh] ">
@@ -22,6 +22,21 @@ export default function Cart() {
           })}
         </div>
       </div>
+      {/* subtotal & total */}
+      {cart.length >= 1 && (
+        <div className="px-6 py-10 flex flex-col">
+          {/* subtotal */}
+          <div className="flex justify-between text-lg">
+            <div>SubTotal</div>
+            <div>$ {total}</div>
+          </div>
+          {/* total */}
+          <div className="flex justify-between text-2xl">
+            <div>Total</div>
+            <div>$ {total}</div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
