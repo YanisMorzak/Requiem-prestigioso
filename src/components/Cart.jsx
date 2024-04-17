@@ -7,7 +7,7 @@ import Total from "./Total";
 import Button from "./Button";
 
 export default function Cart() {
-  const { setIsOpen, cart } = useContext(CartContext);
+  const { setIsOpen, cart, clearCart } = useContext(CartContext);
   return (
     <div className="w-full h-full px-4">
       <div className="overflow-y-auto overflow-x-hidden h-[77vh] ">
@@ -30,7 +30,7 @@ export default function Cart() {
       <div className="px-6">
         {cart.length >= 1 ? (
           <div className="flex justify-between gap-x-4">
-            <Button btnValue={"Clear Cart"} />
+            <Button onClick={() => clearCart()} btnValue={"Clear Cart"} />
             <Button btnValue={"Checkout"} />
           </div>
         ) : (

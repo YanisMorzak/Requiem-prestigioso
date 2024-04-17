@@ -107,6 +107,11 @@ export default function CartProvider({ children }) {
     }
   };
 
+  //clear cart
+  const clearCart = () => {
+    setCart([]);
+  };
+
   return (
     <CartContext.Provider
       value={{
@@ -119,6 +124,7 @@ export default function CartProvider({ children }) {
         handleInput,
         handleSelect,
         total,
+        clearCart,
       }}
     >
       {children}
