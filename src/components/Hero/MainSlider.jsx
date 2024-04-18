@@ -29,12 +29,12 @@ export default function MainSlider() {
                   <div className="uppercase mb-1 text-center lg:text-left">
                     {slide.pretitle}
                   </div>
-                  <div className="text-3xl md:text-[46px] font-semibold uppercase leading-none text-center lg:text-left mb-8">
+                  <div className="text-3xl md:text-[44px] font-semibold uppercase leading-none text-center lg:text-left mb-8">
                     {slide.titlePart1} <br />
                     {slide.titlePart2} <br />
                     {slide.titlePart3}
                   </div>
-                  <button className="h-[50px] flex justify-center items-center rounded-[8px] px-10 py-[10px] text-sm uppercase font-bold bg-light text-primary hover:bg-accent-hover transition-all mx-auto lg:mx-0">
+                  <button className="h-[50px] flex justify-center items-center rounded-[8px] px-10 py-[10px] text-sm uppercase font-bold bg-extraLight text-primary hover:bg-accent-hover transition-all mx-auto lg:mx-0">
                     Shop now
                   </button>
                 </div>
