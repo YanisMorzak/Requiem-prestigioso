@@ -2,6 +2,7 @@ import React from "react";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import FormFooter from "./FormFooter";
+import LinksFooter from "./LinksFooter";
 
 export default function Footer() {
   return (
@@ -19,7 +20,8 @@ export default function Footer() {
         {/* form */}
         <FormFooter />
         {/* links */}
-        <div className="text-base text-white/60 flex gap-x-6 capitalize max-w-max mx-auto mb-9 md:mb-6">
+        <LinksFooter />
+        {/* <div className="text-base text-white/60 flex gap-x-6 capitalize max-w-max mx-auto mb-9 md:mb-6">
           <a href="#" className="hover:text-white transition-all">
             Returns policy
           </a>
@@ -29,7 +31,7 @@ export default function Footer() {
           <a href="#" className="hover:text-white transition-all">
             Shipping & Delivery
           </a>
-        </div>
+        </div> */}
         {/* socials */}
         <div className="flex gap-x-6 max-w-max mx-auto text-xl mb-16">
           <a href="#" className="hover:text-white text-light transition-all">
