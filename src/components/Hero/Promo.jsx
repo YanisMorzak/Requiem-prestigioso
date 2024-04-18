@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Promo() {
   return (
@@ -10,9 +11,12 @@ export default function Promo() {
           <div className="text-[20px] uppercase font-medium leading-tight mb-4">
             Save 35% all Piano{" "}
           </div>
-          <a href="#" className="uppercase text-yellow-300 font-semibold">
+          <Link
+            to={"/products/1"}
+            className="uppercase text-yellow-300 font-semibold"
+          >
             Shop now
-          </a>
+          </Link>
         </div>
         {/* image */}
         <img
@@ -28,9 +32,12 @@ export default function Promo() {
           <div className="text-[20px] uppercase font-medium leading-tight mb-4">
             Save 25% all Drums{" "}
           </div>
-          <a href="#" className="uppercase text-yellow-300 font-semibold">
+          <Link
+            to={"/products/4"}
+            className="uppercase text-yellow-300 font-semibold"
+          >
             Shop now
-          </a>
+          </Link>
         </div>
         {/* image */}
         <img

@@ -8,6 +8,7 @@ import "./../../slider.css";
 
 import { Pagination } from "swiper/modules";
 import { sliderData } from "../../data/sliderData";
+import { Link } from "react-router-dom";
 
 export default function MainSlider() {
   return (
@@ -34,9 +35,11 @@ export default function MainSlider() {
                     {slide.titlePart2} <br />
                     {slide.titlePart3}
                   </div>
-                  <button className="h-[50px] flex justify-center items-center rounded-[8px] px-10 py-[10px] text-sm uppercase font-bold bg-extraLight text-primary hover:bg-accent-hover transition-all mx-auto lg:mx-0">
-                    Shop now
-                  </button>
+                  <Link to={"/products/3"}>
+                    <button className="h-[50px] flex justify-center items-center rounded-[8px] px-10 py-[10px] text-sm uppercase font-bold bg-extraLight text-primary hover:bg-accent-hover transition-all mx-auto lg:mx-0">
+                      Shop now
+                    </button>
+                  </Link>
                 </div>
                 {/* image */}
                 <div className="flex-1">
