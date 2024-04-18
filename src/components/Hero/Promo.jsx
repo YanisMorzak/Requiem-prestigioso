@@ -35,7 +35,7 @@ export default function Promo() {
         {/* image */}
         <img
           className="absolute z-10 -top-2 -right-0"
-          src={"/images/Design_sans_titre__2_-removebg-preview.png"}
+          src={"/images/batterie-promo.png"}
           alt=""
         />
       </div>
