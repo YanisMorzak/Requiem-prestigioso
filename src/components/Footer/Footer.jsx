@@ -2,6 +2,7 @@ import React from "react";
 import FormFooter from "./FormFooter";
 import LinksFooter from "./LinksFooter";
 import SocialIconFooter from "./SocialIconFooter";
+import CopyrightFooter from "./CopyrightFooter";
 
 export default function Footer() {
   return (
@@ -23,13 +24,7 @@ export default function Footer() {
         {/* socials */}
         <SocialIconFooter />
         {/* Copyright */}
-        <div className="py-10 border-t border-t-white/10">
-          <div className="container mx-auto">
-            <div className="text-center text-sm text-white/60">
-              Copyright & copy; Requiem Prestigioso 2024. All rights reserved.
-            </div>
-          </div>
-        </div>
+        <CopyrightFooter />
       </div>
     </footer>
   );
