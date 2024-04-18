@@ -32,7 +32,7 @@ export default function CartItem({ item }) {
             <CartItemQuantity item={item} />
           </div>
           <div className="text-accent text-xl">
-            $ {item.attributes.price * item.amount}
+            $ {(item.attributes.price * item.amount).toLocaleString()}
           </div>
         </div>
         {/* price */}
