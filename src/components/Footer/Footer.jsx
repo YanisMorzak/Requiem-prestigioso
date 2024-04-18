@@ -1,6 +1,7 @@
 import React from "react";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import FormFooter from "./FormFooter";
 
 export default function Footer() {
   return (
@@ -16,16 +17,7 @@ export default function Footer() {
           </p>
         </div>
         {/* form */}
-        <form className="w-full max-w-3xl mx-auto flex flex-col md:flex-row gap-5 my-12">
-          <input
-            type="text"
-            placeholder="Your email adress"
-            className="h-[50px] rounded-[8px] w-full outline-none px-6 text-primary"
-          />
-          <button className="h-[50px] flex justify-center items-center rounded-[8px] px-10 py-[10px] text-sm uppercase font-bold bg-extraLight text-primary hover:bg-accent-hover transition-all min-w-[150px]">
-            Join
-          </button>
-        </form>
+        <FormFooter />
         {/* links */}
         <div className="text-base text-white/60 flex gap-x-6 capitalize max-w-max mx-auto mb-9 md:mb-6">
           <a href="#" className="hover:text-white transition-all">
