@@ -7,6 +7,9 @@ https://github.com/YanisMorzak/Requiem-prestigioso/assets/145578563/9b0f9362-e66
 # Products details Demo
 https://github.com/YanisMorzak/Requiem-prestigioso/assets/145578563/fd7b0e53-4118-43ab-ad55-ba5402185e6b
 
+# Basket Demo
+https://github.com/YanisMorzak/Requiem-prestigioso/assets/145578563/683c91cc-9375-4391-9455-fc85f8946c83
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
