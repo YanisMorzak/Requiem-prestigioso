@@ -1,6 +1,8 @@
 # Homepage Demo
 https://github.com/YanisMorzak/Requiem-prestigioso/assets/145578563/af70e38d-ba62-48cb-8b28-7487b19bf63c
 
+# Categories Demo
+https://github.com/YanisMorzak/Requiem-prestigioso/assets/145578563/9b0f9362-e664-45f4-b36e-8656714dea16
 
 # Getting Started with Create React App
 
